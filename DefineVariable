@@ -1,0 +1,32 @@
+FUNCTION_BLOCK "块_1"
+
+VAR_INPUT
+  
+END_VAR
+
+VAR_OUTPUT
+  
+END_VAR
+
+VAR_IN_OUT DB_SPECIFIC
+  Speed : Real := 2.34;
+END_VAR
+
+VAR RETAIN 
+  MotorNum_1 {EXTERNALVISIBLE := 'false'; EXTERNALACCESSIBLE := 'false'; EXTERNALWRITABLE := 'false'; S7_SETPOINT := 'true'} : Int := 1;//电机数量
+END_VAR
+
+VAR_TEMP 
+  
+END_VAR
+
+VAR CONSTANT
+  
+END_VAR
+
+//RETAIN             此部分中的变量具有保持性，即电源故障后变量值仍然可用。
+//DB_SPECIFIC        在背景数据块中，可设置保持性。
+//EXTERNALVISIBLE    在 HMI 工程组态中可见。
+//EXTERNALACCESSIBLE 从 HMI/OPC UA/Web API 可访问。
+//EXTERNALWRITABLE   从 HMI/OPC UA/Web API 可写。
+//S7_SETPOINT        设定值。FB 静态变量接口
